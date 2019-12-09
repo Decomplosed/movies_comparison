@@ -9,6 +9,19 @@ const fetchData = async (searchTerm) => {
   console.log(res.data)
 }
 
+const debounce = (func) => {
+  let timeoutId
+
+  return () => {
+    if (timeoutId) {
+      clearTimeout(timeoutId)
+    }
+    timeoutId = setTimeout(() => {
+      func()
+    }, 1000)
+  }
+}
+
 let timeoutId
 
 const onInput = e => {
