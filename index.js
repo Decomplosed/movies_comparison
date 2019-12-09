@@ -6,11 +6,12 @@ const fetchData = async (searchTerm) => {
     }
   })
 
-  console.log(res.data)
+  return res.data.Search
 }
 
-const onInput = e => {
-  fetchData(e.target.value)
+const onInput = async e => {
+  const movies = await fetchData(e.target.value)
+  console.log(movies)
 }
 
 const input = document.querySelector('input')
