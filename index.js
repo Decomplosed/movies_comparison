@@ -6,6 +6,10 @@ const fetchData = async (searchTerm) => {
     }
   })
 
+  if (res.data.Error) {
+    return []
+  }
+
   return res.data.Search
 }
 
