@@ -17,14 +17,6 @@ createAutoComplete({
   root: document.querySelector('.autocomplete')
 })
 
-createAutoComplete({
-  root: document.querySelector('.autocomplete-two')
-})
-
-createAutoComplete({
-  root: document.querySelector('.autocomplete-three')
-})
-
 const onMovieSelect = async movie => {
   const res = await axios.get('https://www.omdbapi.com/', {
     params: {
