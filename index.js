@@ -66,3 +66,14 @@ document.addEventListener('click', e => {
     dropdown.classList.remove('is-active')
   }
 })
+
+const onMovieSelect = async movie => {
+  const res = await axios.get('https://www.omdbapi.com/', {
+    params: {
+      apikey: 'c49531a8',
+      i: movie.imdbID
+    }
+  })
+
+  console.log(res.data);
+}
