@@ -55,9 +55,26 @@ const onMovieSelect = async (movie, summaryElement, side) => {
   })
 
   summaryElement.innerHTML = movieTemplate(res.data)
+
+  if (side === 'left') {
+    leftMovie = res.data
+  } else {
+    rightMovie = res.data
+  }
+
+  if (leftMovie && rightMovie) {
+    runComparison()
+  }
+}
+
+const runComparison = () => {
+
 }
 
 const movieTemplate = (movieDetail) => {
+
+
+
   return `
   <article class="media">
     <figure class="media-left">
