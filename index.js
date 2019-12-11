@@ -69,6 +69,7 @@ const onMovieSelect = async (movie, summaryElement, side) => {
 
 const runComparison = () => {
   const leftSideStats = document.querySelectorAll('#left-summary .notification')
+  const rightSideStats = document.querySelectorAll('#right-summary .notification')
 }
 
 const movieTemplate = (movieDetail) => {
